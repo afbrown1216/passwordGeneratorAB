@@ -20,21 +20,28 @@ function generatePassword() {
   if (passwordLength >= 8 || passwordLength <= 128) {
     prompt("You must enter a number between 8 and 128 characters:")
   } // else move on 
-
+ //conditional if true generate a password with this many characters 
   // character types 
   // lowercase
   lowerPassword = prompt("Do you want to include a lowercase character?");
-  //conditional
-
+  //conditional if true generate a password with lowercase character
+  //else do not generate a password with a lowercase character 
+  //create a function for a password with a lowercase character 
   //uppercase
   upperPassword = prompt("Do you want to include an uppercase character?")
-  //conditional
+  //conditional if true generate a password with uppercase character 
+  //elsef do not generate a password with a  lowercase character
+  //create a function for a password with a uppercase character 
   // numeric
   num = prompt("Do you want to include an numeric character?")
-  //conditional
+  //conditional if true generate a password with a numeric character 
+  //else do not genrate a password with a numeric character 
+  //create a function for a password with a
   // special characters 
   specChar = prompt("Do you want to include a special character?")
-  //conditonal 
+ //conditional if true generate a password with a special character 
+ //else do not generate a password with a special character 
+ //create a function for a password with a a special character
 
   //validate the inputs at least one character type should be slected 
 
@@ -44,6 +51,11 @@ function generatePassword() {
 
 }
 
+//functions 
+//generate password with x many characters for loop i<=x then pick each characrter option 
+//generate a password with lowercase character pick a  i = randomnumber between 1-28 then do lowercase[i]
+// generate a password with uppercase characters pick a i = random number between 1-28 then do uppercase[i]
+//generate a password with speical characters pick a random number between the specialCharacter.length to insert into the password array 
 
 
 genpassword = {
