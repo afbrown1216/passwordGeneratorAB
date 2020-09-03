@@ -14,31 +14,32 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
-  
+
   // length between 8-128
-  passwordLength = prompt("Enter a length between 8 and 128 characters:")
-  if(passwordLength >=8 || passwordLength <= 128){
+  passwordLength = prompt("Enter the number of characters between 8 and 128 characters:")
+  if (passwordLength >= 8 || passwordLength <= 128) {
     prompt("You must enter a number between 8 and 128 characters:")
   } // else move on 
 
   // character types 
-// lowercase
-  lowerPassword = prompt("Do you want to include a lowercase character?")
+  // lowercase
+  lowerPassword = prompt("Do you want to include a lowercase character?");
   //conditional
-//uppercase
+
+  //uppercase
   upperPassword = prompt("Do you want to include an uppercase character?")
   //conditional
-// numeric
-num = prompt("Do you want to include an numeric character?")
-//conditional
-// special characters 
-specChar = prompt("Do you want to include a special character?")
-//conditonal 
+  // numeric
+  num = prompt("Do you want to include an numeric character?")
+  //conditional
+  // special characters 
+  specChar = prompt("Do you want to include a special character?")
+  //conditonal 
 
-//validate the inputs at least one character type should be slected 
+  //validate the inputs at least one character type should be slected 
 
-//generate password 
-//return password 
+  //generate password 
+  //return password 
 
 
 }
@@ -46,11 +47,10 @@ specChar = prompt("Do you want to include a special character?")
 
 
 genpassword = {
-  lowercase : ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"],
-  uppercase: ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],
+  lowercase: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
+  uppercase: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
   numeric: [123456789],
-  specialCharacters: 
-  [" !#$%&'()*+,-./:;<=>?@[\]^_`{|}~"],
+  specialCharacters: [" !#$%&'()*+,-./:;<=>?@[\]^_`{|}~"],
 
 }
 
@@ -66,7 +66,3 @@ genpassword = {
 // password 
 // // WHEN the password is generated
 // // THEN the password is either displayed in an alert or written to the page
-
-
-
-
