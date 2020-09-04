@@ -1,13 +1,13 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 var availableCharacters = "";
-var newPassword;
+var newPassword = "";
 
 // Character generation variables 
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numeric = "123456789";
-var specialCharacters = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~ ";
+var specialCharacters = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 
 // Write password to the #password input
 function writePassword() {
@@ -83,14 +83,16 @@ function generatePassword() {
     }
 
   //number generation 
-    for (i = 0; i < passwordLength; i++ ){
+    for (i = 1; i < passwordLength; i++ ){
 
       var randomNumber = Math.floor(Math.random() * availableCharacters.length);
-      
+      console.log(randomNumber)
       var randomCharacter = availableCharacters[randomNumber];
-    
-     newPassword = newPassword + randomCharacter;
+      console.log(randomCharacter);
+      
      
+     newPassword += randomCharacter;
+     console.log(newPassword);
     
     } 
  //create a function for a password with a a special character
@@ -99,6 +101,7 @@ function generatePassword() {
 
   //generate password 
   //return password 
+    
     return newPassword 
 
 }
