@@ -69,15 +69,28 @@ function generatePassword() {
   }
   console.log("Special Characters included: ", specChar);
   console.log("Password Characters available: ", passArray);
-  // for (i = 1; i > passwordLength; i++ ){
 
-  //   var randomIndex = Math.floor(Math.random() * passArray.length) 
-  
-  
-  // } 
+
+  //validate the inputs at least one character type should be selected might put outside to call over again
+  var confirmPassword = confirm(
+    "Created a password with the following characters:  Lowercase" + lCCharacter
+     + " Uppercase " + uCCharacter
+     + " Numeric " + num 
+     + "Special Characters " + specChar)
+    if (!confirmPassword){
+      generatePassword();
+    }
+
+  //number generation 
+    for (i = 1; i > passwordLength; i++ ){
+
+      var randomIndex = Math.floor(Math.random() * passArray.length) 
+    
+    
+    } 
  //create a function for a password with a a special character
 
-  //validate the inputs at least one character type should be slected 
+  
 
   //generate password 
   //return password 
