@@ -23,66 +23,42 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
-
-  // length between 8-128
+  //Prompts and confirms
   passwordLength = prompt("Pick a character count between 8 and 128 for your password:")
+  var lCCharacter = confirm("Do you want to include a lowercase character?");
+  var uCCharacter = confirm("Do you want to include an uppercase character?");
+  var num = confirm("Do you want to include an numeric character?");
+  var specChar = confirm("Do you want to include a special characters?");
+
+
+  //Conditional statement 
+
   if (passwordLength < 8 || passwordLength > 128) {
     prompt("Please enter a number between 8 and 128 characters:")
-  } 
-  console.log("Password Character length: ", passwordLength)
- //conditional if true generate a password with this many characters 
-  // character types 
-  // lowercase
-  var lCCharacter = confirm("Do you want to include a lowercase character?");
+  }; 
   if(lCCharacter){
     availableCharacters = availableCharacters + lowerCase;
-  }
-  console.log("Lowercase Characters included: ", lCCharacter);
-  // console.log("Password Characters available: ",passArray);
-  //conditional if true generate a password with lowercase character
-  //else do not generate a password with a lowercase character 
-  //create a function for a password with a lowercase character 
-  //uppercase
-  var uCCharacter = confirm("Do you want to include an uppercase character?");
-  if(uCCharacter){
+  };
+   if(uCCharacter){
     availableCharacters = availableCharacters + upperCase;
-  }
-
-  console.log("Uppercase Characters included: ", uCCharacter);
-  // console.log("Password Characters available: ",passArray);
-  //conditional if true generate a password with uppercase character 
-  //elsef do not generate a password with a  lowercase character
-  //create a function for a password with a uppercase character 
-  // numeric
-  var num = confirm("Do you want to include an numeric character?");
+  };
   if (num){
     availableCharacters = availableCharacters + numeric;
-  }
-  console.log("Numeric Characters included: ", num);
-  // console.log("Password Characters available: ", passArray);
-  //conditional if true generate a password with a numeric character 
-  //else do not genrate a password with a numeric character 
-  //create a function for a password with a
-  // special characters 
-  var specChar = confirm("Do you want to include a special characters?");
+  };
   if (specChar) {
     availableCharacters = availableCharacters + specChar;
-  }
-  console.log("Special Characters included: ", specChar);
-  // console.log("Password Characters available: ", passArray);
+  };
 
-
-  //validate the inputs at least one character type should be selected might put outside to call over again
-  var confirmPassword = confirm(
-    "Created a password with the following characters:  Lowercase " + lCCharacter
-     + " Uppercase " + uCCharacter
-     + " Numeric " + num 
-     + "Special Characters " + specChar)
-    if (!confirmPassword){
-      generatePassword();
-    }
-
-  //number generation 
+    //validate the inputs at least one character type should be selected might put outside to call over again
+    var confirmPassword = confirm(
+      "Created a password with the following characters:  Lowercase " + lCCharacter
+       + " Uppercase " + uCCharacter
+       + " Numeric " + num 
+       + "Special Characters " + specChar)
+      if (!confirmPassword){
+        generatePassword();
+      }
+    //number generation 
     for (i = 1; i < passwordLength; i++ ){
 
       var randomNumber = Math.floor(Math.random() * availableCharacters.length);
@@ -95,14 +71,15 @@ function generatePassword() {
      console.log(newPassword);
     
     } 
- //create a function for a password with a a special character
 
-  
-
-  //generate password 
-  //return password 
+    //return password 
     
     return newPassword 
+  // length between 8-128
+ 
+  
+
+  
 
 }
 
@@ -148,3 +125,41 @@ function generatePassword() {
 // function dfintions 
 // function calls 
 // event listeners 
+// console.log("Password Character length: ", passwordLength)
+//conditional if true generate a password with this many characters 
+ // character types 
+ // lowercase
+
+//  console.log("Lowercase Characters included: ", lCCharacter);
+ // console.log("Password Characters available: ",passArray);
+ //conditional if true generate a password with lowercase character
+ //else do not generate a password with a lowercase character 
+ //create a function for a password with a lowercase character 
+ //uppercase
+ 
+
+//  console.log("Uppercase Characters included: ", uCCharacter);
+ // console.log("Password Characters available: ",passArray);
+ //conditional if true generate a password with uppercase character 
+ //elsef do not generate a password with a  lowercase character
+ //create a function for a password with a uppercase character 
+ // numeric
+ 
+//  console.log("Numeric Characters included: ", num);
+ // console.log("Password Characters available: ", passArray);
+ //conditional if true generate a password with a numeric character 
+ //else do not genrate a password with a numeric character 
+ //create a function for a password with a
+ // special characters 
+
+//  console.log("Special Characters included: ", specChar);
+ // console.log("Password Characters available: ", passArray);
+
+
+
+
+//create a function for a password with a a special character
+
+ 
+
+ //generate password 
